@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ListPlayers from './components/Listplayers';
 
 import axios from "axios";
 
@@ -9,7 +10,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      players: []
     };
   }
 
@@ -17,7 +18,10 @@ export default class App extends React.Component {
     axios
       .get(playersApi)
       .then(res => {
-        this.setState(res.data)
+        debugger
+        this.setState({
+          players: res.data
+        })
       })
       .catch(error => {
         debugger;
@@ -25,16 +29,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    return <div className="App">hello</div>;
+    return (
+    <div className="App">
+      <ListPlayers players={this.state.players} /> 
+    </div>
+    )
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -18,7 +18,6 @@ export default class App extends React.Component {
     axios
       .get(playersApi)
       .then(res => {
-        debugger
         this.setState({
           players: res.data
         })

@@ -12,7 +12,7 @@ export default function DarkMode() {
 
   return (
     <div>
-      <button type="submit" onClick={toggleDarkMode}>
+      <button type="submit" onClick={toggleDarkMode} data-testid='toggleButton'>
         Toggle Dark Mode
       </button>
     </div>

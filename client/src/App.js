@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import ListPlayers from "./components/Listplayers";
-import DarkMode from "./components/Darkmodetoggle";
+import ListPlayers from "./components/Listplayers.jsx";
+import DarkMode from "./components/Darkmodetoggle.jsx";
 
 import axios from "axios";
 

@@ -1,12 +1,25 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+
+  render() {
+    return <div className="App">hello</div>;
+  }
 }
 
-export default App;
+// function App() {
+//   return (
+//     <div className="App">
+
+//     </div>
+//   );
+// }
+
+// export default App;
